@@ -1,0 +1,68 @@
+<!-- index.ftl (Freemarker template) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Directory</title>
+  <link rel="stylesheet" href="../static/styles.css" />
+</head>
+<body>
+  <header class="dark-header">
+    <div class="header-content">
+      <h1>Employee Directory</h1>
+      <div class="controls">
+        <input type="text" id="searchBar" placeholder="Search by name or email" />
+        <select id="sortSelect">
+          <option value="">Sort By</option>
+          <option value="firstName">First Name</option>
+          <option value="department">Department</option>
+        </select>
+        <select id="entriesPerPage">
+          <option value="10">Show: 10</option>
+          <option value="25">Show: 25</option>
+          <option value="50">Show: 50</option>
+        </select>
+        <button id="filterToggle">Filter</button>
+        <button id="addEmployeeBtn" class="add-btn" onclick="openForm()">Add Employee</button>
+      </div>
+    </div>
+  </header>
+
+  <aside id="filterSidebar" class="hidden">
+    <h2>Filter</h2>
+    <label>First Name: <input type="text" id="filterFirstName" /></label>
+    <label>Department: <input type="text" id="filterDepartment" /></label>
+    <label>Role: <input type="text" id="filterRole" /></label>
+    <button onclick="applyFilters()">Apply</button>
+  </aside>
+
+  <main>
+    <section id="employeeList" class="card-grid"></section>
+    <div id="paginationControls"></div>
+  </main>
+
+  <div id="employeeFormModal" class="modal hidden">
+    <form id="employeeForm">
+      <h2 id="formTitle">Add/Edit Employee</h2>
+      <input type="hidden" id="empId" />
+      <input type="text" id="firstName" placeholder="First Name" required />
+      <input type="text" id="lastName" placeholder="Last Name" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="text" id="department" placeholder="Department" required />
+      <input type="text" id="role" placeholder="Role" required />
+      <div class="form-actions">
+        <button type="submit">Save</button>
+        <button type="button" onclick="closeForm()">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <footer>
+    <p>© 2025 Employee Directory App. All rights reserved.</p>
+  </footer>
+
+  <script src="../static/mockData.js"></script>
+  <script src="../static/script.js"></script>
+</body>
+</html>
