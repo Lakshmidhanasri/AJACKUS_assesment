@@ -13,7 +13,10 @@
 3. Or, use `index.html` version with mock data (if not running server)
 
 ## 📸 Screenshots
-*Add screenshots for desktop and mobile UI*
+Dashboard page <img width="1920" height="1080" alt="Screenshot (52)" src="https://github.com/user-attachments/assets/684b3d7f-db7f-4cd9-965e-aaf5f9206c09" />
+Add Employee from  <img width="1920" height="1080" alt="Screenshot (53)" src="https://github.com/user-attachments/assets/ca37665d-23d2-458f-80d4-2fc12b21ba42" />
+
+
 
 ## 🧠 Reflection
 ### Challenges Faced:
